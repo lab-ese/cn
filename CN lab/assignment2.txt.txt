@@ -1,0 +1,19 @@
+ipconfig -all
+
+ping vupune.ac.in
+
+ping google.com
+
+ping 10.25.2.254
+
+tracert 10.25.2.254
+
+tracert google.com
+
+hostname
+
+nslookup google.com
+
+nslookup vupune.ac.in
+
+nslookup 142.250.183.206
