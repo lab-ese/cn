@@ -1,18 +1,11 @@
-# tcp_client.py
+#tcp_client.py
 import socket
 
-# 1. Create socket
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+c = socket.socket()
+c.connect(("127.0.0.1", 8080))
+print("Connected to server")
 
-# 2. Connect to server
-client_socket.connect(("127.0.0.1", 8080))
+c.send("Hi".encode())
+print("Server: ", c.recv(1024).decode())
 
-# 3. Send message
-client_socket.send("Hello from TCP Client".encode())
-
-# 4. Receive response
-data = client_socket.recv(1024).decode()
-print("Server:", data)
-
-# 5. Close socket
-client_socket.close()
+c.close()
